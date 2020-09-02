@@ -1,5 +1,5 @@
 module.exports = function(array) {
-  return array.filter(number => {
-    return number > 10;
+  return array.map(number => {
+    return Number(number) > 10;
   });
 };

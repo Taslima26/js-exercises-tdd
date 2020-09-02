@@ -1,25 +1,19 @@
 function removeVowels(word) {
-  var characters = word.split("");
+  var characters = word.split('');
+  const vowels = ['a', 'i', 'o', 'e', 'u'];
 
   var result = [];
 
-  characters.forEach(function(character) {
-    if (
-      character === "a" ||
-      character === "o" ||
-      character === "i" ||
-      character === "e" ||
-      character === "u"
-    ) {
+  characters.forEach(function (character) {
+    if (!vowels.includes(character.toLowerCase())) {
       result.push(character);
-    } else {
-      result.push("_");
     }
   });
 
-  return result.join("");
+  return result.join('');
 }
 
+console.log(removeVowels('Taslima'));
 module.exports = removeVowels;
 
 /*
